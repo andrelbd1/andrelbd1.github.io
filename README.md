@@ -20,5 +20,3 @@ Click [here](https://andrelbd1.github.io/).
 ## :telephone: Contact me
 
 e-mail: andrelbd1@gmail.com
-
-
