@@ -164,7 +164,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: #e6b301;
+  color: #17a2b8;
   text-decoration: underline;
 }
 
@@ -175,6 +175,10 @@ a:not([href]) {
 a:not([href]):hover {
   color: inherit;
   text-decoration: none;
+}
+
+.link{
+  color:#007bff;
 }
 
 pre,
@@ -2457,13 +2461,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #fec810;
-  border-color: #fec503;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -9748,7 +9752,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #fed136 !important;
+  color: #17a2b8 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9973,7 +9977,7 @@ p {
 .page-section h2.section-heading {
   font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .page-section h3.section-subheading {
   font-size: 1rem;
@@ -10058,7 +10062,7 @@ img::-moz-selection {
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #17a2b8;
 }
 
 @media (min-width: 992px) {
@@ -10157,7 +10161,7 @@ header.masthead .masthead-heading {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(254, 209, 54, 0.9);
+  background: rgba(23, 162, 184, 0.75);
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -10209,6 +10213,7 @@ header.masthead .masthead-heading {
 }
 .portfolio-modal .modal-content ul.list-inline {
   margin-bottom: 2rem;
+  text-align: justify;
 }
 .portfolio-modal .modal-content img {
   margin-bottom: 2rem;
@@ -10379,7 +10384,7 @@ header.masthead .masthead-heading {
     min-height: 170px;
   }
   .timeline > li .timeline-panel {
-    padding: 0 20px 20px 100px;
+    padding: 0 20px 20px 50px;
   }
   .timeline > li .timeline-image {
     width: 170px;
@@ -10390,7 +10395,7 @@ header.masthead .masthead-heading {
     margin-top: 40px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
-    padding: 0 100px 20px 20px;
+    padding: 0 50px 20px 20px;
   }
 }
 .team-member {
