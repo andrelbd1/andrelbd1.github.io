@@ -97,7 +97,7 @@
                         </div>
                     </div> -->
 
-                    <!-- <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#projectsModalEduvis">
                                 <div class="portfolio-hover">
@@ -112,7 +112,7 @@
                                 <div class="portfolio-caption-subheading text-muted">Data Science</div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
@@ -310,16 +310,46 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">EDUVIS</h2>
-                                    <p class="item-intro text-muted">Desenvolvido em desafio do Frontend Mentor</p>
+                                    <p class="item-intro text-muted">An online tool to assemble dashboards based on instructors’ preferences</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/projects/eduvis/logo.png" alt="" />
                                     <p class="text-muted-justified">
-                                        
+                                        This project was my Ph.D. research, which we shed light on how to support instructors in analyzing student logs from Virtual Learning Environments.
+                                        Our main goal in this project is enable Virtual Learning Environments to assist instructors in gaining insights about both students’ behavior and performance.                                        
+                                    </p>
+                                    <p class="text-muted-justified">
+                                        Firstly, we conducted interviews with instructors who work in Brazil and a systematic mapping of the state-of-art about Education Data Mining and Learning Analytics.
+                                        This study aimed to identify which kinds of information about students the instructors regard as meaningful (e.g., performance, behavior, engagement); how these kinds of information are gathered; and how they drive requirements for improving their analyses.
+                                    </p>
+                                    <p class="text-muted-justified">
+                                        Then, we analyzed logs from online courses offered in Brazil and compared our findings with results presented in the literature. 
+                                        We explored and analyzed these logs using statistical methods and machine learning techniques.
+                                    </p>
+                                    <p class="text-muted-justified">
+                                        Furthermore, we have not found in the literature works about instructors’ visualization preferences of student logs.
+                                        Therefore, we conducted a study to identify how much the instructors take into account topics related to both students’ behavior and performance, as well as their visualization preferences.
+                                    </p>
+                                    <p class="text-muted-justified">
+                                        We also noted a lack of work showing models to support the development of learning analytics tools.
+                                        In order to bridge this gap, we presented a model connecting both Visual Analytics theories and models as well as instructors’ requirements, their visualization preferences, literature guidelines and methods for analyzing student logs.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/projects/eduvis/model.png" alt="" />
+                                    <p class="text-muted-justified">
+                                        We developed EDUVIS 1 as an open source online tool to assemble dashboards based on our proposed model. 
+                                        This tool was built using Python and Javascript. 
+                                        In particular, all the visualizations (total of 141) were designed using Plotly, which provides interactivity, such as zoom in, zoom out, pan, select, toggle spike lines, and mouse hover.
                                     </p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/projects/eduvis/interface.jpg" alt="" />
+                                    <p class="text-muted-justified">
+                                        We captured evidence of their acceptance of our proposal and obtained instructors’ feedback about the tool such as their both analysis and visualization preferences.
+                                        The combination of the answers to the research questions yields a framework to enable Virtual Learning Environments to assist instructors in gaining insights about both students’ behavior and performance. 
+                                        We hope that our proposed model might be a guide to the development of new dashboards and ground future research.
+                                    </p>
                                     <ul class="list-inline">
-                                        <li>Site: <a class="link" target="_blank" href="#">http://eduvis.pythonanywhere.com</a></li>
-                                        <li>Repository: <a class="link" target="_blank" href="#"></a></li>
+                                        <li>EDUVIS: <a class="link" target="_blank" href="http://eduvis.pythonanywhere.com">http://eduvis.pythonanywhere.com</a></li>
+                                        <!-- <li>Repository: <a class="link" target="_blank" href="#"></a></li> -->
+                                        <li>More information: <a class="link" target="_blank" href="https://www.researchgate.net/project/Learning-Analytics-Studies">Papers</a></li>
                                     </ul>
+
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
@@ -342,15 +372,16 @@
                                     <p class="item-intro text-muted">A data science approach applied on legal text</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/projects/similarity/logo.png" alt="" />
                                     <p class="text-muted-justified">
-                                        This project aimed to help prosecutor in finding legal text with similar context. 
+                                        This project aimed to help prosecutor in finding legal text with similar context.
                                         Therefore, we conducted analysis and exploration of data from <a class="link" target="_blank" href='http://www.mprj.mp.br'>Public Prosecution</a> and <a class="link" target="_blank" href='http://www.tjrj.jus.br'>Court of Law</a> from Rio de Janeiro.
                                     </p>
-                                    <p class="text-muted-justified">                                        
+                                    <p class="text-muted-justified">
                                         The documents provided on PDF files had their text extracted, and analyzed to identify patterns.
-                                        We explored some approaches to build a vector representation of these documents and we adopted a model pre-trained using word embeddings focused in text written in portuguese released by USP (Universidade de São Paulo).
-                                        Then, to identify the text similarity, we calculate and sort the cosine distance among vectors.
-                                        We deploy this service into an API rest.
+                                        We explored some approaches to build a vector representation of these documents and we adopted a <a class="link" target="_blank" href='http://nilc.icmc.usp.br/embeddings'>model pre-trained using word embeddings</a> focused in text written in portuguese released by USP (Universidade de São Paulo).
+                                        Then, to identify the text similarity, we calculate and sort by cosine distance among vectors.
+                                        We deploy this service as an API rest.
                                     </p>
+                                    
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
@@ -392,7 +423,6 @@
                                         <li>Site: <a class="link" target="_blank" href="http://ginga.org.br/">http://ginga.org.br</a></li> 
                                         <li>Repository: <a class="link" target="_blank" href="https://github.com/TeleMidia/ginga">GitHub</a></li>
                                     </ul>
-
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
