@@ -80,22 +80,22 @@
                     <h3 class="section-subheading text-muted">Main projects that I have worked.</h3>
                 </div>
                 <div class="row">
-                    <!-- <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-toggle="modal" href="#projectsModalMetereological">
+                            <a class="portfolio-link" data-toggle="modal" href="#projectsModalIAGO">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content">
                                         <h3>Read More</h3>
                                     </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/projects/easybank.jpg" alt=""/>
+                                <img class="img-fluid" src="assets/img/projects/iago/logo.png" alt=""/>
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Metereological Analysis</div>
-                                <div class="portfolio-caption-subheading text-muted">HTML e CSS</div>
+                                <div class="portfolio-caption-heading">IAGO</div>
+                                <div class="portfolio-caption-subheading text-muted">Data Science</div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
@@ -258,7 +258,7 @@
             </div>
         </section>
         
-          <!-- Footer-->
+        <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
@@ -272,8 +272,8 @@
         </footer>
         
         <!-- Projects Modals-->
-        <!-- Modal Metereological-->
-        <!-- <div class="portfolio-modal modal fade" id="projectsModalMetereological" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Modal IAGO-->
+        <div class="portfolio-modal modal fade" id="projectsModalIAGO" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
@@ -281,16 +281,39 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="modal-body">
-                                    <h2 class="text-uppercase">Easybank</h2>
-                                    <p class="item-intro text-muted">Desenvolvido em desafio do Frontend Mentor</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/projects/easybank.jpg" alt="" />
-                                    <p>Com este projeto desenvolvido seguindo o layout apresentado pelo desafio, pude colocar em prática todo meu conhecimento adquirido em cursos e estudos anteriores, utilizando muito CSS Grid e Flexbox. Para mais informações acesse o repositório do site.</p>
-                                    <ul class="list-inline">
-                                        <li>Data: Abril 2020</li>
-                                        <li>Tecnologias: HTML e CSS</li>
-                                        <li><a target="_blank" href="#">Site</a></li>
-                                        <li><a target="_blank" href="#">Repositório</a></li>
-                                    </ul>
+                                    <h2 class="text-uppercase">IAGO</h2>
+                                    <p class="item-intro text-muted">Artificial Intelligence for Odor Management </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/projects/iago/logo.png" alt="" />
+                                    <p class="text-muted-justified">
+                                        This project was performed to diagnose and forecast high levels of hydrogen sulfide (H2S), a poisonous, toxic, and dangerous gas, commonly emitted in oil refineries.
+                                        The main idea is provide these informations through a dashboard to support end-users in their decision-making.
+                                    </p>
+                                    <p class="text-muted-justified">
+                                        Firstly, we explored and analyzed data from refinery using statistical methods and visualization techniques.
+                                        Through these analyses, we identified important correlations and insights with meteorological data, such as both wind direction and speed, humidity amd temperature.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/projects/iago/visualization.png" alt="" />
+                                    <p class="text-muted-justified">
+                                        Then, we developed a model using a machine learning technique to provide prescriptive information about H2S emissions.
+                                        Our model return H2S levels based on a threshold defined by the end-users.
+                                        <!-- In line with our work, \citet{Cadei2019} developed a real-time, end-to-end tool to monitor \ce{H2S} emissions in an oil and gas field, using machine-learning and data mining techniques to raise alarms and then provide prescriptive information. 
+                                            Their solution also features a dedicated dashboard to monitor the risks of high \ce{H2S} levels and model performance. 
+                                            It contains the following visualizations: 
+                                                a classification of the current risk of high \ce{H2S} rates (low, medium or high); the defined threshold; 
+                                                a bar chart that shows the predictions of \ce{H2S} emission rates of the last day; 
+                                                and a line chart that displays real measurements of \ce{H2S} by a specific sensor, which can be used to rapidly assess the behavior of the gas unit and validate the model predictions. 
+                                                %When the user selects a specific prediction, a new visualization of feature impacts is shown.  -->
+                                        
+                                    </p>
+                                    <p class="text-muted-justified">
+                                        Finally, we chose Power BI to develop our dashboard. 
+                                        The main visualization comprises a bar and a line chart that shows the predictions of H2S emission rates.
+                                        We also presented “Cards” tab in our dashboard to show meteorological data and possible causes for the H2S measurement in a given time.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/projects/iago/interface.png" alt="" />
+                                    <!-- <ul class="list-inline">
+                                        <li>More information: <a class="link" target="_blank" href="https://www.researchgate.net/project/Learning-Analytics-Studies">Papers</a></li>
+                                    </ul> -->
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
                                 </div>
                             </div>
@@ -298,7 +321,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Modal Eduvis-->
         <div class="portfolio-modal modal fade" id="projectsModalEduvis" tabindex="-1" role="dialog" aria-hidden="true">
@@ -446,7 +469,7 @@
                                     <img class="img-fluid d-block mx-auto" src="assets/img/projects/cacuria/logo.png" alt="" />
                                     <p class="text-muted-justified">
                                         Cacuriá is an authoring tool designed to create educational content (aka learning objects) for the Web and Interactive Digital TV environments.
-                                        This project was my M.Sc. research. The purpose of this tool is to enable education professionals to create learning objects through an intuitive process, which is designed and crafted by the teacher himself. 
+                                        This project was my M.Sc. research, focused on enabling education professionals to create learning objects through an intuitive process, which is designed and crafted by the teacher. 
                                         This process is based on educational videos, which will be enriched by the professional directly (without the need of a programmer or designer) and also by adding multimedia content (image, audio, text etc).
                                     </p>
                                     <p class="text-muted-justified">
