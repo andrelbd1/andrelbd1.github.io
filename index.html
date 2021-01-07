@@ -130,6 +130,23 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#projectsModalDistribution">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content">
+                                        <h3>Read More</h3>
+                                    </div>
+                                </div>
+                                <img class="img-fluid" src="assets/img/projects/distribution/logo.png" alt=""/>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Distribution of Court Proceedings</div>
+                                <div class="portfolio-caption-subheading text-muted">Data Science</div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
@@ -414,6 +431,38 @@
             </div>
         </div>
         
+        <!-- Modal Distribution-->
+        <div class="portfolio-modal modal fade" id="projectsModalDistribution" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Distribution of Court Proceedings</h2>
+                                    <p class="item-intro text-muted">A recommendation system to assign prosecutors in court proceedings</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/projects/distribution/logo.png" alt="" />
+                                    <p class="text-muted-justified">
+                                        This project aimed to help the Public Prosecution from Rio de Janeiro in assigning fit prosecutors according to subject .
+                                        Therefore, we conducted analysis and exploration of data from <a class="link" target="_blank" href='http://www.mprj.mp.br'>Public Prosecution</a> and <a class="link" target="_blank" href='http://www.tjrj.jus.br'>Court of Law</a> from Rio de Janeiro.
+                                    </p>
+                                    <p class="text-muted-justified">
+                                        Firstly, we explored and analyzed these data using statistical.
+                                        Through these analyses, we identified important correlations.
+                                        Then, we developed a model using a machine learning technique to provide the fit prosecutor.
+                                        We deploy this service as an API rest.
+                                    </p>
+                                    
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Modal Ginga-->
         <div class="portfolio-modal modal fade" id="projectsModalGinga" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
