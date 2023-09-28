@@ -449,22 +449,55 @@
                                 <p class="item-intro text-muted">Digital Inspector: Artificial Intelligence for Equipment Inspection </p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/projects/digital_inspector/logo.jpg" alt="" />
                                 <p class="text-muted-justified">
-                                    Developed under my technical leadership in collaboration with Petrobras when I was a data scientist at ExACTa PUC-Rio. The problem was related to the integrity of equipment in an oil and gas refinery, which is ensured by a set of standardized management processes. One of these processes is equipment inspection, where equipment analyses are conducted by inspection experts and documented in technical reports. Just like any other written text, these reports can occasionally contain inaccuracies or gaps in critical information related to the management process. Such inaccuracies in reports must be promptly identified and corrected to ensure an effective inspection process, accurate information, and compliance with maintenance deadlines.
+                                    Developed under my technical leadership in collaboration with <a class="link" target="_blank" 
+                                    href='https://petrobras.com.br/en/'>Petrobras</a> when I was a data scientist at <a class="link" 
+                                    target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a>. The problem was related to 
+                                    the integrity of equipment in an oil and gas refinery, which is ensured by a set of standardized management 
+                                    processes. One of these processes is equipment inspection, where equipment analyses are conducted by 
+                                    inspection experts and documented in technical reports. Just like any other written text, these reports 
+                                    can occasionally contain inaccuracies or gaps in critical information related to the management process. 
+                                    Such inaccuracies in reports must be promptly identified and corrected to ensure an effective inspection 
+                                    process, accurate information, and compliance with maintenance deadlines.
                                 </p>
                                 <p class="text-muted-justified">
-                                    Our proposal, therefore, was to build an artificial intelligence model to assist inspectors in report writing. To accomplish this, we started by constructing a database through the collection of reports produced by all Petrobras refineries throughout the last few years. In essence, these reports consist of determining whether the equipment is in proper working condition. If not, it was necessary to describe the damage, its cause, the mechanism of damage, and the maintenance action required. We had the assistance of a group of selected inspectors as consultants to clarify potential doubts and validate our proposal. 
+                                    Our proposal, therefore, was to build an artificial intelligence model to assist inspectors in report 
+                                    writing. To accomplish this, we started by constructing a database through the collection of reports 
+                                    produced by all Petrobras refineries throughout the last few years. In essence, these reports consist 
+                                    of determining whether the equipment is in proper working condition. If not, it was necessary to 
+                                    describe the damage, its cause, the mechanism of damage, and the maintenance action required. We had 
+                                    the assistance of a group of selected inspectors as consultants to clarify potential doubts and validate 
+                                    our proposal. 
                                 </p>
                                 <p class="text-muted-justified">
-                                    After constructing our database, we performed meticulous text extraction, data structuring, cleaning, and standardization. We made several discoveries after extensive data exploration and the application of statistical methods. One of these discoveries was that the terms used in the reports were quite limited. Due to this, we were able to classify all possible damages, causes, mechanisms, and actions present in the reports. Furthermore, we identified a strong correlation between them. We also found a correlation between the location of the refinery and the damages and causes, which made perfect sense since rust damage, for example, was more frequent in refineries located near the sea.
+                                    After constructing our database, we performed meticulous text extraction, data structuring, cleaning, 
+                                    and standardization. We made several discoveries after extensive data exploration and the application of 
+                                    statistical methods. One of these discoveries was that the terms used in the reports were quite limited. 
+                                    Due to this, we were able to classify all possible damages, causes, mechanisms, and actions present in the 
+                                    reports. Furthermore, we identified a strong correlation between them. We also found a correlation between 
+                                    the location of the refinery and the damages and causes, which made perfect sense since rust damage, for 
+                                    example, was more frequent in refineries located near the sea.
                                 </p>
                                 <p class="text-muted-justified">
-                                    Next, we built a decision tree model that, based on the damage and cause, suggests the mechanism and action to be taken. This machine learning model was chosen for its interpretability. Based on our tests, the harmonic mean of accuracy and precision (F1 score) reached a result greater than 95%. At the request of the Petrobras team, we also conducted a test with Azure's AutoML service, which yielded a positive result very close to our model's performance. Consequently, we decided to keep the AutoML model to facilitate the solution's maintenance by the Petrobras team.
+                                    Next, we built a decision tree model that, based on the damage and cause, suggests the mechanism and action 
+                                    to be taken. This machine learning model was chosen for its interpretability. Based on our tests, the 
+                                    harmonic mean of accuracy and precision (F1 score) reached a result greater than 95%. At the request of the 
+                                    Petrobras team, we also conducted a test with Azure's AutoML service, which yielded a positive result very 
+                                    close to our model's performance. Consequently, we decided to keep the AutoML model to facilitate the 
+                                    solution's maintenance by the Petrobras team.
                                 </p>
                                 <p class="text-muted-justified">
-                                    Subsequently, we deployed our model as a service called the "Digital Inspector," designed to detect inaccuracies or gaps in the wording of reports, providing real-time alerts to inspectors and suggesting the most appropriate terms for damages, causes, mechanisms, and actions in the report. This service was made available through a RESTful API that allowed integration with the equipment inspection management system used by Petrobras inspectors. Additionally, the digital inspector can improve its learning as more reports are added to our database, validated by inspectors, and made available for continuous model retraining.
+                                    Subsequently, we deployed our model as a service called the "Digital Inspector," designed to detect 
+                                    inaccuracies or gaps in the wording of reports, providing real-time alerts to inspectors and suggesting 
+                                    the most appropriate terms for damages, causes, mechanisms, and actions in the report. This service was 
+                                    made available through a RESTful API that allowed integration with the equipment inspection management 
+                                    system used by Petrobras inspectors. Additionally, the digital inspector can improve its learning as more 
+                                    reports are added to our database, validated by inspectors, and made available for continuous model 
+                                    retraining.
                                 </p>
                                 <p class="text-muted-justified">
-                                    This project received the Petrobras Inventor Award 2022 in recognition of the results achieved and the impact on the efficiency of equipment maintenance in refineries across Brazil. Undoubtedly, the project was challenging but provided ample opportunities to learn. I am so proud of the achieved results.
+                                    This project received the Petrobras Inventor Award 2022 in recognition of the results achieved and the 
+                                    impact on the efficiency of equipment maintenance in refineries across Brazil. Undoubtedly, the project 
+                                    was challenging but provided ample opportunities to learn. I am so proud of the achieved results.
                                 </p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/projects/digital_inspector/award.jpg"
                                     alt="" />
@@ -498,10 +531,12 @@
                                 <p class="item-intro text-muted">Artificial Intelligence for Odor Management </p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/projects/iago/logo.png" alt="" />
                                 <p class="text-muted-justified">
-                                    As a data scientist at ExACTa PUC-Rio, I executed a project focused on diagnosing and
-                                    forecasting high levels of hydrogen sulfide (H2S), a poisonous, toxic, and hazardous gas
-                                    commonly emitted in oil refineries. The main idea was to provide this crucial information
-                                    through a dashboard to support end-users in their decision-making.
+                                    As a data scientist at <a class="link" target="_blank" href='https://www.exacta.inf.puc-rio.br/'>
+                                    ExACTa PUC-Rio</a>, I executed a project focused on diagnosing and forecasting high levels of 
+                                    hydrogen sulfide (H2S), a poisonous, toxic, and hazardous gas commonly emitted in oil refineries
+                                    from <a class="link" target="_blank" href='https://petrobras.com.br/en/'>Petrobras</a>. The main 
+                                    idea was to provide this crucial information through a dashboard to support end-users in their 
+                                    decision-making.
                                 </p>
                                 <p class="text-muted-justified">
                                     The project began with a thorough exploration and analysis of refinery historical data using
