@@ -95,6 +95,24 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="#projectsModalSoybeanYieldForecast">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>Read More</h3>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/projects/soybean_yield_forecast/logo.jpg" alt="" />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Soybean Yield Forecast</div>
+                            <div class="portfolio-caption-subheading text-muted"><b>Data Science, Machine Learning</b></div>
+                            <div class="portfolio-caption-subheading text-muted">python, pandas, geopandas, numpy, scikit-learn, flask</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#projectsModalDigitalInspector">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
@@ -436,6 +454,75 @@
     </footer>
     
     <!-- Projects Modals-->
+    <!-- Modal Soybean Yield Forecast-->
+    <div class="portfolio-modal modal fade" id="projectsModalSoybeanYieldForecast" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <h2 class="text-uppercase">Soybean Yield Forecast</h2>
+                                <p class="item-intro text-muted">Artificial Intelligence to Support Agribusiness </p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/projects/soybean_yield_forecast/logo.jpg" alt="" />
+                                <p class="text-muted-justified">
+                                    As Data Science Manager at <a class="link" target="_blank" href='https://gaivota.ai/'>Gaivota</a>, I led 
+                                    a important project early in my role. The project aimed to predict soybean yields for cities in Mato Grosso, 
+                                    a renowned state in Brazil celebrated for its exceptional soybean productivity in the world. This topic is 
+                                    an extensive problem in agriculture and one of the most interesting for farmers, industry, and government
+                                    stakeholders for strategies that will lead to increased crop production. That yield is related to the amount
+                                    of produced grains in a region. To increase this yield, farmers use several techniques, such as: selection
+                                    of high-quality seeds, adequate soil preparation, application of fertilizers, use of efficient irrigation
+                                    techniques and control of pests and diseases. Predicting agricultural productivity is a complex task that
+                                    involves the analysis of several factors, such as climate, soil, technology and agricultural management
+                                    practices. Predicting agricultural productivity is a multifaceted endeavor, involving the analysis of
+                                    multiple variables such as climate, soil attributes, technological advancements, and agricultural management
+                                    practices. Typically, mathematical and statistical models that account for these variables are employed.
+                                    However, it's vital to recognize that these forecasts are estimates, and producers must remain prepared
+                                    for unforeseen challenges, such as extreme weather events, diseases, and pest infestations.
+                                </p>
+                                <p class="text-muted-justified">
+                                    Given that my team lacked prior experience in this domain, we conducted an extensive literature review of papers 
+                                    published in the last five years (between 2016 and 2021). Our aim was to gain insights into methodologies for 
+                                    predicting crop yields, critical information required for accurate predictions, and prevalent models used in 
+                                    this context. The literature review adhered to a well-defined protocol, evaluating papers for key issues, 
+                                    objectives, methodologies, case studies, and outcomes. Following a thorough analysis, we identified two papers 
+                                    that stood out for their meaningful results and their provision of source code on GitHub (<a class="link" 
+                                    target="_blank" href='https://github.com/JiaxuanYou/crop_yield_prediction'>paper 1</a> and 
+                                    <a class="link" target="_blank" href='https://github.com/gabrieltseng/pycrop-yield-prediction'>
+                                    paper 2</a>).
+                                </p>
+                                <p class="text-muted-justified">
+                                    Subsequently, we compiled a comprehensive dataset comprising temperature records, satellite imagery, land cover
+                                    and rainfall data, soil attributes, and municipal-level soybean production data. Our main goal was to forecast
+                                    soybean yields in kilograms per hectare for 89 cities in Mato Grosso, focusing exclusively on this specific
+                                    geographical area. Based on the selected papers, we implemented an ensemble model utilizing Deep Learning
+                                    techniques, including Convolutional Neural Networks (CNN) and Random Forests (RF). Through meticulous
+                                    experimentation with various data combinations and sliding window parameters, we achieved great results.
+                                    To evaluate and quantify the model performance, we relied on established regression metrics such as Mean
+                                    Absolute Percentage Error (MAPE) and Root Mean Square Error (RMSE).
+                                </p>
+                                <p class="text-muted-justified">
+                                    Furthermore, we established an AWS-based pipeline to facilitate continuous data updates. This pipeline
+                                    encompassed data storage in raw format, data cleansing, model training, soybean yield forecasting for each
+                                    Mato Grosso city, and storage of these predictions in a relational database. We deployed a Restful API to
+                                    provide an interface for internal applications to access our data. This project represented a formidable
+                                    challenge, one that I'm particularly proud of. Its successful execution was a testament to the collaborative
+                                    efforts of a multidisciplinary team of data scientists. It's worth noting that this project not only contributed
+                                    to expanding our customer base but also showcased the company's product potential to a broader audience.
+                                </p>
+
+                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                        class="fas fa-times mr-1"></i>Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Digital Inspector-->
     <div class="portfolio-modal modal fade" id="projectsModalDigitalInspector" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
@@ -446,7 +533,7 @@
                         <div class="col-lg-8">
                             <div class="modal-body">
                                 <h2 class="text-uppercase">Digital Inspector</h2>
-                                <p class="item-intro text-muted">Digital Inspector: Artificial Intelligence for Equipment Inspection </p>
+                                <p class="item-intro text-muted">Artificial Intelligence for Equipment Inspection </p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/projects/digital_inspector/logo.jpg" alt="" />
                                 <p class="text-muted-justified">
                                     Developed under my technical leadership in collaboration with <a class="link" target="_blank" 
