@@ -95,6 +95,24 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="#projectsModalUserInteractionAnalysis">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <h3>Read More</h3>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/projects/user_interaction_analysis/logo.jpg" alt="" />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">User Interaction Analysis</div>
+                            <div class="portfolio-caption-subheading text-muted"><b>Data Science, Process Mining</b></div>
+                            <div class="portfolio-caption-subheading text-muted">python, pandas, pm4py, heap, metabase, aws</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="portfolio-item">
                         <a class="portfolio-link" data-toggle="modal" href="#projectsModalRuralPropertyValuation">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
@@ -106,7 +124,7 @@
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Rural Property Valuation</div>
                             <div class="portfolio-caption-subheading text-muted"><b>Data Science, Machine Learning</b></div>
-                            <div class="portfolio-caption-subheading text-muted">python, pandas, geopandas, numpy, plotly, matplotlib, scikit-learn, flask</div>
+                            <div class="portfolio-caption-subheading text-muted">python, pandas, geopandas, numpy, plotly, matplotlib, scikit-learn, flask, aws</div>
                         </div>
                     </div>
                 </div>
@@ -124,7 +142,7 @@
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Soybean Yield Forecast</div>
                             <div class="portfolio-caption-subheading text-muted"><b>Data Science, Machine Learning</b></div>
-                            <div class="portfolio-caption-subheading text-muted">python, pandas, geopandas, numpy, scikit-learn, flask</div>
+                            <div class="portfolio-caption-subheading text-muted">python, pandas, geopandas, numpy, scikit-learn, flask, aws</div>
                         </div>
                     </div>
                 </div>
@@ -142,7 +160,7 @@
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Digital Inspector</div>
                             <div class="portfolio-caption-subheading text-muted"><b>Data Science, Machine Learning</b></div>
-                            <div class="portfolio-caption-subheading text-muted">python, pandas, numpy, matplotlib, scikit-learn, flask</div>
+                            <div class="portfolio-caption-subheading text-muted">python, pandas, numpy, matplotlib, scikit-learn, flask, azure</div>
                         </div>
                     </div>
                 </div>
@@ -160,7 +178,7 @@
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">IAGO</div>
                             <div class="portfolio-caption-subheading text-muted"><b>Data Science, Machine Learning</b></div>
-                            <div class="portfolio-caption-subheading text-muted">python, pandas, numpy, matplotlib, plotly, scikit-learn, power bi</div>
+                            <div class="portfolio-caption-subheading text-muted">python, pandas, numpy, matplotlib, plotly, scikit-learn, power bi, azure</div>
                         </div>
                     </div>
                 </div>
@@ -473,6 +491,72 @@
     
     <!-- Projects Modals-->
     
+    <!-- Modal User Interaction Analysis-->
+    <div class="portfolio-modal modal fade" id="projectsModalUserInteractionAnalysis" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <h2 class="text-uppercase">User Interaction Analysis</h2>
+                                <p class="item-intro text-muted">Supporting Product Managers and Designers in their decision-making</p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/projects/user_interaction_analysis/logo.jpg" alt="" />
+                                <p class="text-muted-justified">
+                                    In my role as the Data Science Manager at <a class="link" target="_blank" href='https://gaivota.ai/'>Gaivota</a>
+                                    in 2022 and <a class="link" target="_blank" href='https://www.seedz.ag/'>Seedz</a> in 2023, I led a critical
+                                    project focused on analyzing user interactions within the company's web system, known as Seedz Mercator. 
+                                    This project played a central role in enhancing the user experience, determining the efficacy of content and 
+                                    design elements, ascertaining the most visited pages, identifying engaging components, spotting technical glitches, 
+                                    gaining insights into individual user preferences and behaviors, and facilitating data-driven decisions to align 
+                                    with business objectives and regulatory requirements. This initiative was instrumental in helping the company gain 
+                                    a deeper understanding of their user base, enabling them to continually refine their online presence to meet 
+                                    evolving user expectations and needs.
+                                </p>
+                                <p class="text-muted-justified">
+                                    Our initial step in this project involved the integration of a third-party software solution to meticulously
+                                    track each user's actions and manage logs. We established a comprehensive set of tags to map relevant events, 
+                                    including pageviews, clicks on elements, and interactions with hover buttons. Subsequently, we constructed a 
+                                    robust data pipeline utilizing AWS services to store raw data, perform preprocessing tasks such as data cleansing, 
+                                    filtering, and formatting, and then deliver this refined data for visualization. These visualizations served as a
+                                    foundation for answering critical questions related to user access and pageviews, among others, and were primarily 
+                                    driven by insights gathered from discussions with product managers and designers.
+                                </p>
+                                <p class="text-muted-justified">
+                                    In addition to these efforts, I conducted an in-depth study employing <a class="link" target="_blank"
+                                    href='https://www.sciencedirect.com/science/article/pii/S2665963823000933'>process mining</a> techniques to
+                                    elucidate the flow of events generated by users within the system. This analysis allowed us to pinpoint key flows,
+                                    bottlenecks, and the average time spent on each flow. As a result, we unearthed unexpected patterns in pageviews
+                                    that diverged from managerial expectations and identified potential reasons why certain pages were underutilized.
+                                    Moreover, we successfully clustered users based on their behavioral patterns, a pivotal development that enabled
+                                    us to craft a targeted action plan grounded in data.
+                                </p>
+                                <p class="text-muted-justified">
+                                    One notable outcome of this project was the initiation of user interviews, strategically conducted with 
+                                    representatives from each user cluster. These interviews aimed to gain a comprehensive understanding of 
+                                    their event flows within the system, their goals, and any pain points they encountered. The insights gathered 
+                                    from these interviews played a vital role in shaping subsequent actions and adjustments to enhance the user 
+                                    experience within Seedz Mercator.
+                                </p>
+                                <p class="text-muted-justified">
+                                    Furthermore, the meticulous process we established for tracking and analyzing user interactions served as a 
+                                    valuable foundation for enabling our product managers and designers to conduct A/B tests effectively. A/B testing 
+                                    played a pivotal role in refining our web systems, allowing us to assess the impact of design and content changes 
+                                    on user engagement and satisfaction. I take immense pride in the outcomes we achieved through this project, as 
+                                    they not only provided us with actionable insights but also drove significant improvements in user experience, 
+                                    ultimately leading to enhanced user retention and business growth.
+                                </p>
+                                <button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                        class="fas fa-times mr-1"></i>Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Rural Property Valuation-->
     <div class="portfolio-modal modal fade" id="projectsModalRuralPropertyValuation" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
