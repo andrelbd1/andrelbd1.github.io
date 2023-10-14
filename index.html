@@ -789,12 +789,7 @@
                                 <p class="item-intro text-muted">Artificial Intelligence for Odor Management </p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/projects/iago/logo.png" alt="" />
                                 <p class="text-muted-justified">
-                                    As a data scientist at <a class="link" target="_blank" href='https://www.exacta.inf.puc-rio.br/'>
-                                    ExACTa PUC-Rio</a> in 2020, I executed a project focused on diagnosing and forecasting high levels of 
-                                    hydrogen sulfide (H2S), a poisonous, toxic, and hazardous gas commonly emitted in oil refineries
-                                    from <a class="link" target="_blank" href='https://petrobras.com.br/en/'>Petrobras</a>. The main 
-                                    idea was to provide this crucial information through a dashboard to support end-users in their 
-                                    decision-making.
+                                    As a data scientist at <a class="link" target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a> in 2020, I executed a project focused on diagnosing and forecasting high levels of hydrogen sulfide (H2S), a poisonous, toxic, and hazardous gas frequently released in oil refineries from <a class="link" target="_blank" href='https://petrobras.com.br/en/'>Petrobras</a>. This problem posed a significant threat to the well-being and safety of a local community situated near a refinery in the northeast region from Brazil. This issue had garnered extensive coverage in various Brazilian news portals, including <a class="link" target="_blank" href='https://g1.globo.com/pe/pernambuco/noticia/2020/01/28/moradores-denunciam-problemas-de-saude-por-causa-de-cheiro-forte-de-gas-que-sai-de-refinaria-no-litoral-sul.ghtml'>g1</a>. The primary aim of this initiative was to provide essential information through an intuitive dashboard, enabling end-users to support their decision-making.
                                 </p>
                                 <p class="text-muted-justified">
                                     The project began with a thorough exploration and analysis of refinery historical data using
@@ -805,27 +800,16 @@
                                 <img class="img-fluid d-block mx-auto" src="assets/img/projects/iago/visualization.png"
                                     alt="" />
                                 <p class="text-muted-justified">
-                                    Then, we developed a decision tree model to provide prescriptive information regarding H2S emissions.
-                                    This machine learning model was deliberately chosen for its interpretability, allowing us to elucidate its
-                                    learning process and gain insights into its decision-making mechanisms. Our model was designed to generate H2S
-                                    level predictions based on a threshold defined by the end-users.
-                                    <!-- In line with our work, \citet{Cadei2019} developed a real-time, end-to-end tool to monitor \ce{H2S} emissions in an oil and gas field, using machine-learning and data mining techniques to raise alarms and then provide prescriptive information. 
-                                            Their solution also features a dedicated dashboard to monitor the risks of high \ce{H2S} levels and model performance. 
-                                            It contains the following visualizations: 
-                                                a classification of the current risk of high \ce{H2S} rates (low, medium or high); the defined threshold; 
-                                                a bar chart that shows the predictions of \ce{H2S} emission rates of the last day; 
-                                                and a line chart that displays real measurements of \ce{H2S} by a specific sensor, which can be used to rapidly assess the behavior of the gas unit and validate the model predictions. 
-                                                %When the user selects a specific prediction, a new visualization of feature impacts is shown.  -->
-
+                                    Then, we developed a decision tree model to provide prescriptive information regarding H2S emissions. This machine learning model was deliberately chosen for its interpretability, allowing us to elucidate its learning process and gain insights into its decision-making mechanisms. Our model was engineered to forecast H2S levels based on a threshold defined by refinery operators.
                                 </p>
                                 <p class="text-muted-justified">
-                                    Finally, to visualize and present our findings effectively, we selected Power BI as our platform
-                                    for dashboard development. The central visualization component featured a bar and line chart, illustrating
-                                    the predicted H2S emission rates. Additionally, we included a "Cards" tab within the dashboard to display
-                                    meteorological data and potential factors contributing to H2S measurements at a given time.
+                                    To effectively present our model's results, we adopted Power BI as the platform for developing our dashboard. The central visualization component featured a bar and line chart, providing a visual representation of the predicted H2S emission rates. Additionally, we included a "Cards" tab within the dashboard to display meteorological data and potential factors contributing to H2S levels at any given time. It is worth emphasizing that the dashboard's interface was a collaborative effort, involving feedback from refinery operators, ensuring an intuitive and user-friendly interface.
                                 </p>
                                 <img class="img-fluid d-block mx-auto" src="assets/img/projects/iago/interface.png"
                                     alt="" />
+                                <p class="text-muted-justified">
+                                    This project was particularly demanding due to the tight timeline for delivering a solution to mitigate the issue and protect the local population near the refinery. Fortunately, our model yielded favorable results, and the dashboard was well-received by refinery operators, facilitating their understanding of the factors contributing to high H2S levels. Subsequently, our solution was adopted across various Petrobras refineries throughout Brazil.
+                                </p>
                                 <!-- <ul class="list-inline">
                                         <li>More information: <a class="link" target="_blank" href="https://www.researchgate.net/project/Learning-Analytics-Studies">Papers</a></li>
                                     </ul> -->
@@ -970,10 +954,11 @@
                                     designed for Portuguese text, developed by USP (Universidade de São Paulo). 
                                 </p>
                                 <p class="text-muted-justified">
-                                    To evaluate text similarity, we employed cosine distance calculations among the vectors and arranged 
-                                    the results accordingly. To enhance accessibility, we transformed this functionality into a RESTful API service, 
-                                    streamlining the process for our end-users. The outcome was a collection of legal texts sorted in ascending order
-                                     of cosine distance, making it easier to identify and access documents with similar contextual content.
+                                    We used cosine distance calculations to determine the similarity of texts and sorted the results accordingly.
+                                    To make this feature more accessible, we transformed it into a RESTful API service, which streamlined the process
+                                    for our users. The result is a collection of legal texts sorted in ascending order of cosine distance, making it
+                                    easier to identify and access documents with similar contextual content. This improvement has increased the
+                                    efficiency of the Public Prosecution of Rio de Janeiro.
                                 </p>
                                 <button class="btn btn-primary" data-dismiss="modal" type="button"><i
                                         class="fas fa-times mr-1"></i>Close Project</button>
