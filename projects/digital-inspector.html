@@ -1,80 +1,134 @@
-<div class="portfolio-modal modal fade" id="projectsModalDigitalInspector" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <h2 class="text-uppercase">Digital Inspector</h2>
-                            <p class="item-intro text-muted">Artificial Intelligence for Equipment Inspection </p>
-                            <img class="img-fluid d-block mx-auto" src="assets/img/projects/digital-inspector/logo.jpg" alt="" />
-                            <p class="text-muted-justified">
-                                Developed under my technical leadership in collaboration with <a class="link" target="_blank" 
-                                href='https://petrobras.com.br/en/'>Petrobras</a> when I was a data scientist at <a class="link" 
-                                target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a> in 2020. The problem was related to 
-                                the integrity of equipment in an oil and gas refinery, which is ensured by a set of standardized management 
-                                processes. One of these processes is equipment inspection, where equipment analyses are conducted by 
-                                inspection experts and documented in technical reports. Just like any other written text, these reports 
-                                can occasionally contain inaccuracies or gaps in critical information related to the management process. 
-                                Such inaccuracies in reports must be promptly identified and corrected to ensure an effective inspection 
-                                process, accurate information, and compliance with maintenance deadlines.
-                            </p>
-                            <p class="text-muted-justified">
-                                Our proposal, therefore, was to build an artificial intelligence model to assist inspectors in report 
-                                writing. To accomplish this, we started by constructing a database through the collection of reports 
-                                produced by all Petrobras refineries throughout the last few years. In essence, these reports consist 
-                                of determining whether the equipment is in proper working condition. If not, it was necessary to 
-                                describe the damage, its cause, the mechanism of damage, and the maintenance action required. We had 
-                                the assistance of a group of selected inspectors as consultants to clarify potential doubts and validate 
-                                our proposal. 
-                            </p>
-                            <p class="text-muted-justified">
-                                After constructing our database, we performed meticulous text extraction, data structuring, cleaning, 
-                                and standardization. We made several discoveries after extensive data exploration and the application of 
-                                statistical methods. One of these discoveries was that the terms used in the reports were quite limited. 
-                                Due to this, we were able to classify all possible damages, causes, mechanisms, and actions present in the 
-                                reports. Furthermore, we identified a strong correlation between them. We also found a correlation between 
-                                the location of the refinery and the damages and causes, which made perfect sense since rust damage, for 
-                                example, was more frequent in refineries located near the sea.
-                            </p>
-                            <p class="text-muted-justified">
-                                Next, we built a decision tree model that, based on the damage and cause, suggests the mechanism and action 
-                                to be taken. This machine learning model was chosen for its interpretability. Based on our tests, the 
-                                harmonic mean of accuracy and precision (F1 score) reached a result greater than 95%. At the request of the 
-                                Petrobras team, we also conducted a test with Azure's AutoML service, which yielded a positive result very 
-                                close to our model's performance. Consequently, we decided to keep the AutoML model to facilitate the 
-                                solution's maintenance by the Petrobras team.
-                            </p>
-                            <p class="text-muted-justified">
-                                Subsequently, we deployed our model as a service called the "Digital Inspector," designed to detect 
-                                inaccuracies or gaps in the wording of reports, providing real-time alerts to inspectors and suggesting 
-                                the most appropriate terms for damages, causes, mechanisms, and actions in the report. This service was 
-                                made available through a RESTful API that allowed integration with the equipment inspection management 
-                                system used by Petrobras inspectors. Additionally, the digital inspector can improve its learning as more 
-                                reports are added to our database, validated by inspectors, and made available for continuous model 
-                                retraining.
-                            </p>
-                            <p class="text-muted-justified">
-                                This project received the Petrobras Inventor Award 2022 in recognition of the results achieved and the 
-                                impact on the efficiency of equipment maintenance in refineries across Brazil. Undoubtedly, the project 
-                                was challenging but provided ample opportunities to learn. I am so proud of the achieved results.
-                            </p>
-                            <img class="img-fluid d-block mx-auto" src="assets/img/projects/digital-inspector/award.jpg"
-                                alt="" />
-                            
-                            <ul class="list-inline">
-                                <li>More information:
-                                    <a class="link" target="_blank"
-                                        href="https://www.inf.puc-rio.br/blog/noticia/noticia/dois-projetos-da-iniciativa-exacta-receberam-o-premio-inventor-2022-petrobras">Award</a>
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary" data-dismiss="modal" type="button"><i
-                                    class="fas fa-times mr-1"></i>Close Project</button>
-                        </div>
-                    </div>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>About André Luiz</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="../index.html#page-top">Andre Luiz</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About me</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#analyses">Analyses</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-section bg-white portfolio-section" id="projects">
+        <div class="container" style="margin-top: 27px;">
+            <div class="text-center">
+                <img class="img-fluid d-block mx-auto" src="../assets/img/projects/digital-inspector/logo.jpg" alt="" />
+                <h2 class="section-heading text-uppercase">Digital Inspector</h2>
+                <h3 class="section-subheading text-muted">Artificial Intelligence for Equipment Inspection</h3>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    
+                    <p class="text-muted-justified">
+                        Developed under my technical leadership in collaboration with <a class="link" target="_blank" 
+                        href='https://petrobras.com.br/en/'>Petrobras</a> when I was a data scientist at <a class="link" 
+                        target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a> in 2020. The problem was related to 
+                        the integrity of equipment in an oil and gas refinery, which is ensured by a set of standardized management 
+                        processes. One of these processes is equipment inspection, where equipment analyses are conducted by 
+                        inspection experts and documented in technical reports. Just like any other written text, these reports 
+                        can occasionally contain inaccuracies or gaps in critical information related to the management process. 
+                        Such inaccuracies in reports must be promptly identified and corrected to ensure an effective inspection 
+                        process, accurate information, and compliance with maintenance deadlines.
+                    </p>
+                    <p class="text-muted-justified">
+                        Our proposal, therefore, was to build an artificial intelligence model to assist inspectors in report 
+                        writing. To accomplish this, we started by constructing a database through the collection of reports 
+                        produced by all Petrobras refineries throughout the last few years. In essence, these reports consist 
+                        of determining whether the equipment is in proper working condition. If not, it was necessary to 
+                        describe the damage, its cause, the mechanism of damage, and the maintenance action required. We had 
+                        the assistance of a group of selected inspectors as consultants to clarify potential doubts and validate 
+                        our proposal. 
+                    </p>
+                    <p class="text-muted-justified">
+                        After constructing our database, we performed meticulous text extraction, data structuring, cleaning, 
+                        and standardization. We made several discoveries after extensive data exploration and the application of 
+                        statistical methods. One of these discoveries was that the terms used in the reports were quite limited. 
+                        Due to this, we were able to classify all possible damages, causes, mechanisms, and actions present in the 
+                        reports. Furthermore, we identified a strong correlation between them. We also found a correlation between 
+                        the location of the refinery and the damages and causes, which made perfect sense since rust damage, for 
+                        example, was more frequent in refineries located near the sea.
+                    </p>
+                    <p class="text-muted-justified">
+                        Next, we built a decision tree model that, based on the damage and cause, suggests the mechanism and action 
+                        to be taken. This machine learning model was chosen for its interpretability. Based on our tests, the 
+                        harmonic mean of accuracy and precision (F1 score) reached a result greater than 95%. At the request of the 
+                        Petrobras team, we also conducted a test with Azure's AutoML service, which yielded a positive result very 
+                        close to our model's performance. Consequently, we decided to keep the AutoML model to facilitate the 
+                        solution's maintenance by the Petrobras team.
+                    </p>
+                    <p class="text-muted-justified">
+                        Subsequently, we deployed our model as a service called the "Digital Inspector," designed to detect 
+                        inaccuracies or gaps in the wording of reports, providing real-time alerts to inspectors and suggesting 
+                        the most appropriate terms for damages, causes, mechanisms, and actions in the report. This service was 
+                        made available through a RESTful API that allowed integration with the equipment inspection management 
+                        system used by Petrobras inspectors. Additionally, the digital inspector can improve its learning as more 
+                        reports are added to our database, validated by inspectors, and made available for continuous model 
+                        retraining.
+                    </p>
+                    <p class="text-muted-justified">
+                        This project received the Petrobras Inventor Award 2022 in recognition of the results achieved and the 
+                        impact on the efficiency of equipment maintenance in refineries across Brazil. Undoubtedly, the project 
+                        was challenging but provided ample opportunities to learn. I am so proud of the achieved results.
+                    </p>
+                    <img class="img-fluid d-block mx-auto" src="../assets/img/projects/digital-inspector/award.jpg"
+                        alt="" />
+                    
+                    <ul class="list-inline">
+                        <li>More information:
+                            <a class="link" target="_blank"
+                                href="https://www.inf.puc-rio.br/blog/noticia/noticia/dois-projetos-da-iniciativa-exacta-receberam-o-premio-inventor-2022-petrobras">Award</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+
+    <!-- Footer-->
+    <div id="footer"></div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    
+    <script>
+        const body = ['footer'];
+        body.forEach(b => {
+            fetch(`../body/${b}.html`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(`${b}`).outerHTML = data;
+                })
+                .catch(error => console.error(`Error loading ${b}:`, error));
+        });
+    </script>
+</body>
+</html>
