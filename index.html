@@ -69,7 +69,7 @@
     <div id="project-similarity"></div>
     <div id="project-distribution"></div>
     <div id="project-ginga"></div>
-    <div id="project-cacuria"></div>
+    <!-- <div id="project-cacuria"></div> -->
 
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -104,7 +104,7 @@
                           'eduvis', 'ginga', 'iago', 'rural-property-valuation',
                           'similarity', 'soybean-yield-forecast', 'user-interaction-analysis'];
         projects.forEach(project => {
-            fetch(`body/projects/${project}.html`)
+            fetch(`body/modals/${project}.html`)
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById(`project-${project}`).outerHTML = data;
