@@ -1,0 +1,43 @@
+<div class="portfolio-modal modal fade" id="projectsModalSimilarity" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal"><img src="assets/img/close-icon.svg" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <h2 class="text-uppercase">Text Similarity</h2>
+                            <p class="item-intro text-muted">A data science approach applied on legal text</p>
+                            <img class="img-fluid d-block mx-auto" src="assets/img/projects/similarity/logo.png"
+                                alt="" />
+                            <p class="text-muted-justified">                                    
+                                During my time as a data scientist at <a class="link" target="_blank" 
+                                href='https://ecoa.puc-rio.br/'>ECOA PUC-Rio</a> in 2019, I initiated a project with the 
+                                objective of assisting prosecutors in locating legal texts with similar contextual content. 
+                                This project involved in-depth analysis and exploration of data obtained from both the  
+                                <a class="link" target="_blank" href='http://www.mprj.mp.br'>Public Prosecution</a> and 
+                                <a class="link" target="_blank" href='http://www.tjrj.jus.br'>Court of Law</a> from Rio de Janeiro.
+                            </p>
+                            <p class="text-muted-justified">
+                                The documents, mainly in PDF format, underwent a text extraction process, followed by a meticulous 
+                                pattern identification and analysis. To construct a vector representation of these documents, 
+                                we explored various methodologies and ultimately opted for a <a class="link" target="_blank" 
+                                href='http://nilc.icmc.usp.br/embeddings'>pre-trained model using word embeddings</a> specifically 
+                                designed for Portuguese text, developed by USP (Universidade de São Paulo). 
+                            </p>
+                            <p class="text-muted-justified">
+                                We used cosine distance calculations to determine the similarity of texts and sorted the results accordingly.
+                                To make this feature more accessible, we transformed it into a RESTful API service, which streamlined the process
+                                for our users. The result is a collection of legal texts sorted in ascending order of cosine distance, making it
+                                easier to identify and access documents with similar contextual content. This improvement has increased the
+                                efficiency of the Public Prosecution of Rio de Janeiro.
+                            </p>
+                            <button class="btn btn-primary" data-dismiss="modal" type="button"><i
+                                    class="fas fa-times mr-1"></i>Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
