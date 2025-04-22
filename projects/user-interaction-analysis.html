@@ -66,17 +66,20 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-11">
-                    <p class="text-muted-justified">                        
+                    <p class="text-muted-justified">
                         As the Data Science Manager at <a class="link" target="_blank" href='https://gaivota.ai/'>Gaivota</a> (2022) and
                         <a class="link" target="_blank" href='https://www.seedz.ag/'>Seedz</a> (2023), I led a high-impact project to analyze user 
-                        interactions within Seedz Mercator, which is a platform to manage agribusiness data such as compliance analysis, crop identification,
+                        interactions within Seedz-Mercator, illustrated in Figure 1, which is a platform to manage agribusiness data such as compliance analysis, crop identification,
                         land cover, and property valuation. The company wanted to understand the user interactions on the platform to enhance the user experience,
-                        and identify the most visited pages, components, user preferences and behaviors.
+                        and identify the most visited pages, components, user preferences and behaviors.                        
+                    </p>
+                    <p class="text-muted-centered">
                         <img class="img-fluid d-block mx-auto" src="../assets/img/projects/user-interaction-analysis/seedz-mercator-platform.png" alt="" />
+                        <b>Figure 1:</b> Seedz-Mercator map viewer interface.
                     </p>
                     <p class="text-muted-justified">
                         My experience in dashboards and data visualization has been a significant asset in this project.
-                        In my Ph.D. research, I developed a model for building dashboards to help instructors analyze student logs from Virtual Learning Environments, as illustrated image below.
+                        In my <a class="link" target="_blank" href='https://doi.org/10.17771/PUCRio.acad.50335'>Ph.D. research</a>, I developed a model for building dashboards to help instructors analyze student logs from Virtual Learning Environments, as illustrated Figure 2.
                         And this research has a strong connection with the challenges faced by the company. 
                         So, I used this model adapting for our needs.
                         Our process consisted of:
@@ -86,21 +89,31 @@
                             <li><b>Building visualizations</b> to allow Product Teams assemble dashboards</li>
                             <li><b>Presenting relevant findings</b> about user preferences and behavior</li>
                         </ul>
+                    </p>
+                    <p class="text-muted-centered">
                         <img class="img-fluid d-block mx-auto" src="../assets/img/projects/eduvis/model.png" alt="" />
+                        <b>Figure 2:</b> A model for building dashboards. Source: <a class="link" target="_blank" href='https://doi.org/10.17771/PUCRio.acad.50335'>https://doi.org/10.17771/PUCRio.acad.50335</a>.
                     </p>
                     <p class="text-muted-justified">
                         Our initial step in this project involved interviews with Project Managers, Designers, and Product Owners to understand their needs and visualization preferences.
-                        And we documented all the gathered requirements as research questions, such as <i>"Which layers in the map are the most selected by the users?"</i>
+                        And we documented all the gathered requirements as research questions, such as <i>"Which layers in the map are the most selected by the users?"</i>;
                         <i>"What is the typical user path from sign-in to log-out?"</i>.
-                        Our goal was to provide a solution to track user interactions, identify patterns, and present a dashboard with insights for the product teams.
+                        Figure 3 presents our goal of providing a solution to track user interactions, identify patterns, and present a dashboard with insights for the product teams.
+                    </p>
+                    <p class="text-muted-centered">
                         <img class="img-fluid d-block mx-auto" src="../assets/img/projects/user-interaction-analysis/goal.png" alt="" />
+                        <b>Figure 3:</b> Schema to track user interactions, identify patterns, and present a dashboard with actionable insights for the product teams.
                     </p>
                     <p class="text-muted-justified">
                         Next, we integrated with Heap Analytics, a third-party tool to capture user activity and manage logs, which allow us define interactions to track through tags.
                         We established a comprehensive set of tags to map relevant events, including pageviews, clicks on elements, and interactions with hover buttons.
-                        Using AWS services, we built a scalable data pipeline to ingest, clean, and structure this data for analysis and visualization through the Metabase.
+                        Using AWS services such as S3, Lambda and RDS, we built a scalable data pipeline to ingest, clean, and structure this data for analysis and visualization through the Metabase.
                         These visualizations, developed in collaboration with product managers and designers, provided critical insights into user access patterns and engagement metrics.
-                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/user-interaction-analysis/pipeline.png" alt="" />
+                        Figure 4 illustrates the data pipeline we developed to support this process.
+                    </p>
+                    <p class="text-muted-centered">
+                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/user-interaction-analysis/pipeline.png" alt="" />                        
+                        <b>Figure 4:</b> Data pipeline architecture designed to extract, transform, load, and visualize user interaction data, enabling actionable insights for product teams.
                     </p>
                     <p class="text-muted-justified">
                         To further understand user behavior, I applied <a class="link" target="_blank"
@@ -108,7 +121,10 @@
                         uncover bottlenecks, and measure time spent on key flows. This analysis revealed unexpected navigation patterns and highlighted
                         underperforming pages, informing product strategy. Additionally, I led the clustering of users based on behavior, which enabled
                         the design of targeted initiatives and user outreach.
+                    </p>
+                    <p class="text-muted-centered">
                         <img class="img-fluid d-block mx-auto" src="../assets/img/projects/user-interaction-analysis/process-mining-results.png" alt="" />
+                        <b>Figure 5:</b> Petri Net representation of the user sign-up journey. Nodes represent page view events, while edges in the left graph indicate the number of users transitioning between events. Edges in the right graph present the average time spent between page view events. <b>Note: Values shown are illustrative and not actual data</b>.
                     </p>
                     <p class="text-muted-justified">
                         One key outcome was the initiation of structured user interviews with representatives from each behavioral cluster.
@@ -117,10 +133,10 @@
                     </p>
                     <p class="text-muted-justified">
                         Our work also laid the groundwork for effective A/B testing by product and design teams.
-                        With a reliable tracking and analysis infrastructure in place, we could confidently evaluate the impact of interface
-                        and content changes on user engagement and satisfaction. I’m proud of the tangible results of this project, which
-                        significantly improved the user experience, boosted retention, and drove meaningful business growth through
-                        data-informed decisions.
+                        With a reliable tracking and analysis infrastructure in place, we could evaluate the impact of interface
+                        and content changes on user engagement and satisfaction.
+                        I’m proud of the tangible results of this project, which significantly improved the user experience,
+                        boosted retention, and drove meaningful business growth through data-informed decisions.
                     </p>
                 </div>
             </div>
