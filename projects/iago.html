@@ -28,33 +28,59 @@
                 <h2 class="section-heading text-uppercase">IAGO</h2>
                 <h3 class="section-subheading text-muted">Artificial Intelligence for Odor Management</h3>
             </div>
+            <div class="text-left">
+                <h4 class="section-heading text-capitalize">Overview</h4>
+            </div>
             <div class="row justify-content-center">
-                <div class="col-md-12">
+                <div class="col-md-11">
                     <p class="text-muted-justified">
-                        As a data scientist at <a class="link" target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a> in 2020, I executed a project focused on diagnosing and forecasting high levels of hydrogen sulfide (H2S), a poisonous, toxic, and hazardous gas frequently released in oil refineries from <a class="link" target="_blank" href='https://petrobras.com.br/en/'>Petrobras</a>. This problem posed a significant threat to the well-being and safety of a local community situated near a refinery in the northeast region from Brazil. This issue had garnered extensive coverage in various Brazilian news portals, including <a class="link" target="_blank" href='https://g1.globo.com/pe/pernambuco/noticia/2020/01/28/moradores-denunciam-problemas-de-saude-por-causa-de-cheiro-forte-de-gas-que-sai-de-refinaria-no-litoral-sul.ghtml'>g1</a>. The primary aim of this initiative was to provide essential information through an intuitive dashboard, enabling end-users to support their decision-making.
+                        <b>(S)ituation:</b> Petrobras, a relevant Oil and Gas company, faced a critical issue with elevated hydrogen sulfide (H2S) emissions in its oil refineries, posing a severe threat to the safety of the local community.
                     </p>
                     <p class="text-muted-justified">
-                        The project began with a thorough exploration and analysis of refinery historical data using
-                        statistical methods and visualization techniques. Through these analyses, we uncovered significant
-                        correlations and insights, particularly in conjunction with meteorological data, including wind
-                        direction and speed, humidity, and temperature.
+                        <b>(T)ask:</b> To assist the refineries in identifying and mitigating the root causes of elevated H2S emissions.
                     </p>
-                    <img class="img-fluid d-block mx-auto" src="../assets/img/projects/iago/visualization.png"
-                        alt="" />
+                    <p class="text-muted-justified">
+                        <b>(A)ction:</b> We conducted in-depth data exploration, correlating refinery historical data with meteorological information. Subsequently, we developed a robust machine-learning model to provide prescriptive insights into H2S emissions. A Power BI dashboard was also created to visualize the factors influencing H2S levels every 5 minutes.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>(R)esult:</b> Our solution encompassing machine learning and a dashboard led to a substantial reduction in H2S emissions and was successfully deployed across multiple refineries.
+                    </p>
+                </div>
+            </div>
+            <div class="text-left">
+                <h4 class="section-heading text-capitalize">Full Report</h4>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <p class="text-muted-justified">
+                        As a data scientist at <a class="link" target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a> in 2020, I executed a project focused on diagnosing and forecasting high levels of hydrogen sulfide (H2S), a poisonous, toxic, and hazardous gas frequently released in oil refineries from <a class="link" target="_blank" href='https://petrobras.com.br/en/'>Petrobras</a>.
+                        This problem posed a significant threat to the well-being and safety of a local community situated near a refinery in the northeast region from Brazil. This issue had garnered extensive coverage in various Brazilian news portals, including <a class="link" target="_blank" href='https://g1.globo.com/pe/pernambuco/noticia/2020/01/28/moradores-denunciam-problemas-de-saude-por-causa-de-cheiro-forte-de-gas-que-sai-de-refinaria-no-litoral-sul.ghtml'>g1</a>.
+                        The primary aim of this initiative was to provide essential information through an intuitive dashboard, enabling end-users to support their decision-making.
+                    </p>
+                    <p class="text-muted-justified">
+                        The project began with an exploration and analysis of refinery historical data using statistical methods and visualization techniques.
+                        Through these analyses, we uncovered significant correlations and insights, particularly in conjunction with daylight hours and meteorological data, including wind direction and speed, humidity, and temperature.
+                        In summary, we identified that the daylight hours and wind speed were the most significant factors influencing H2S concentration.
+                        In the daylight hours, the wind speed was higher, leading to a more effective dispersion of H2S gas, resulting in lower concentrations.
+                        Conversely, during the night, the wind speed decreased, causing H2S gas to accumulate in the vicinity of the refinery, leading to higher concentrations.
+                    </p>
+                    <p class="text-muted-centered">
+                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/iago/visualization.png" alt="" />
+                        <b>Figure 1:</b> Heatmap illustrating H2S concentration levels, where the y-axis represents hours, the x-axis represents minutes, and the color gradient from green to red indicates low to high H2Sconcentrations. The accompanying polar bar chart presents the relationship between wind direction and speed during daylight and non-daylight hours.
+                    </p>
                     <p class="text-muted-justified">
                         Then, we developed a decision tree model to provide prescriptive information regarding H2S emissions. This machine learning model was deliberately chosen for its interpretability, allowing us to elucidate its learning process and gain insights into its decision-making mechanisms. Our model was engineered to forecast H2S levels based on a threshold defined by refinery operators.
                     </p>
                     <p class="text-muted-justified">
                         To effectively present our model's results, we adopted Power BI as the platform for developing our dashboard. The central visualization component featured a bar and line chart, providing a visual representation of the predicted H2S emission rates. Additionally, we included a "Cards" tab within the dashboard to display meteorological data and potential factors contributing to H2S levels at any given time. It is worth emphasizing that the dashboard's interface was a collaborative effort, involving feedback from refinery operators, ensuring an intuitive and user-friendly interface.
                     </p>
-                    <img class="img-fluid d-block mx-auto" src="../assets/img/projects/iago/interface.png"
-                        alt="" />
+                    <p class="text-muted-centered">
+                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/iago/interface.png" alt="" />
+                        <b>Figure 2:</b> A prototype of the dashboard developed in Power BI, showcasing predicted H2S emission rates and key meteorological factors influencing the levels.
+                    </p>
                     <p class="text-muted-justified">
                         This project was particularly demanding due to the tight timeline for delivering a solution to mitigate the issue and protect the local population near the refinery. Fortunately, our model yielded favorable results, and the dashboard was well-received by refinery operators, facilitating their understanding of the factors contributing to high H2S levels. Subsequently, our solution was adopted across various Petrobras refineries throughout Brazil.
                     </p>
-                    <!-- <ul class="list-inline">
-                            <li>More information: <a class="link" target="_blank" href="https://www.researchgate.net/project/Learning-Analytics-Studies">Papers</a></li>
-                        </ul> -->
                 </div>
             </div>
         </div>
