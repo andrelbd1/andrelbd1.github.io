@@ -28,62 +28,72 @@
                 <h2 class="section-heading text-uppercase">Digital Inspector</h2>
                 <h3 class="section-subheading text-muted">Artificial Intelligence for Equipment Inspection</h3>
             </div>
+            <div class="text-left">
+                <h4 class="section-heading text-capitalize">Overview</h4>
+            </div>
             <div class="row justify-content-center">
-                <div class="col-md-12">
+                <div class="col-md-11">
+                    <p class="text-muted-justified">
+                        <b>(S)ituation:</b> Petrobras, a relevant Oil and Gas company, faced an issue of inaccuracies in reports of equipment inspection performed by experts.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>(T)ask:</b> Our goal was to build an artificial intelligence model to assist inspectors in report writing.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>(A)ction:</b> We constructed a comprehensive database of inspection reports and performed data analysis. Then, we developed a web service using a machine learning model to detect inaccuracies or gaps in reports and suggest appropriate terms for damages, causes, mechanisms, and actions.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>(R)esult:</b> As a result, the harmonic mean of accuracy and precision (F1 score) reached a result greater than 95%. This project received the Petrobras Inventor Award 2022 in recognition of the results achieved and the impact on the efficiency of equipment maintenance in refineries.
+                    </p>
+                </div>
+            </div>
+            <div class="text-left">
+                <h4 class="section-heading text-capitalize">Full Report</h4>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-11">
                     <p class="text-muted-justified">
                         Developed under my technical leadership in collaboration with <a class="link" target="_blank" 
-                        href='https://petrobras.com.br/en/'>Petrobras</a> when I was a data scientist at <a class="link" 
-                        target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a> in 2020. The problem was related to 
-                        the integrity of equipment in an oil and gas refinery, which is ensured by a set of standardized management 
-                        processes. One of these processes is equipment inspection, where equipment analyses are conducted by 
-                        inspection experts and documented in technical reports. Just like any other written text, these reports 
-                        can occasionally contain inaccuracies or gaps in critical information related to the management process. 
-                        Such inaccuracies in reports must be promptly identified and corrected to ensure an effective inspection 
-                        process, accurate information, and compliance with maintenance deadlines.
+                        href='https://petrobras.com.br/en/'>Petrobras</a> during my time as a Data Scientist at <a class="link" 
+                        target="_blank" href='https://www.exacta.inf.puc-rio.br/'>ExACTa PUC-Rio</a> in 2020, this project addressed
+                        a critical challenge in equipment integrity management within oil and gas refineries.
+                        One essential process involves the inspection of equipment, where experts document their assessments in technical
+                        reports. These reports, however, can sometimes include inaccuracies or omit crucial information—issues that must
+                        be quickly detected and corrected to ensure accurate inspections and compliance with maintenance deadlines.
                     </p>
                     <p class="text-muted-justified">
-                        Our proposal, therefore, was to build an artificial intelligence model to assist inspectors in report 
-                        writing. To accomplish this, we started by constructing a database through the collection of reports 
-                        produced by all Petrobras refineries throughout the last few years. In essence, these reports consist 
-                        of determining whether the equipment is in proper working condition. If not, it was necessary to 
-                        describe the damage, its cause, the mechanism of damage, and the maintenance action required. We had 
-                        the assistance of a group of selected inspectors as consultants to clarify potential doubts and validate 
-                        our proposal. 
+                        Our proposal was to build AI-based solution to assist inspectors in drafting more accurate reports.
+                        We began by building a comprehensive database of inspection reports from all Petrobras refineries over recent years.
+                        These reports typically determine whether equipment is functioning properly and, if not, describe the damage,
+                        its cause, the failure mechanism, and the recommended corrective action.
+                        Throughout the project, a group of experienced inspectors supported us as consultants, validating our approach and
+                        clarifying domain-specific aspects.
                     </p>
                     <p class="text-muted-justified">
-                        After constructing our database, we performed meticulous text extraction, data structuring, cleaning, 
-                        and standardization. We made several discoveries after extensive data exploration and the application of 
-                        statistical methods. One of these discoveries was that the terms used in the reports were quite limited. 
-                        Due to this, we were able to classify all possible damages, causes, mechanisms, and actions present in the 
-                        reports. Furthermore, we identified a strong correlation between them. We also found a correlation between 
-                        the location of the refinery and the damages and causes, which made perfect sense since rust damage, for 
-                        example, was more frequent in refineries located near the sea.
+                        After extracting, cleaning, and standardizing the report data, we discovered that the vocabulary used was relatively limited.
+                        This allowed us to classify all possible damage types, causes, mechanisms, and actions.
+                        We also identified strong correlations among these variables and between refinery location and certain damage types.
+                        For instance, rust being more common in coastal areas.
                     </p>
                     <p class="text-muted-justified">
-                        Next, we built a decision tree model that, based on the damage and cause, suggests the mechanism and action 
-                        to be taken. This machine learning model was chosen for its interpretability. Based on our tests, the 
-                        harmonic mean of accuracy and precision (F1 score) reached a result greater than 95%. At the request of the 
-                        Petrobras team, we also conducted a test with Azure's AutoML service, which yielded a positive result very 
-                        close to our model's performance. Consequently, we decided to keep the AutoML model to facilitate the 
-                        solution's maintenance by the Petrobras team.
+                        We developed a decision tree model to suggest likely mechanisms and corrective actions based on the reported damage and cause.
+                        This model was selected for its interpretability and achieved an F1 score above 95%.
+                        At Petrobras’ request, we also tested Azure AutoML, which delivered similar results.
+                        To simplify maintenance, we adopted the AutoML solution moving forward.
                     </p>
                     <p class="text-muted-justified">
-                        Subsequently, we deployed our model as a service called the "Digital Inspector," designed to detect 
-                        inaccuracies or gaps in the wording of reports, providing real-time alerts to inspectors and suggesting 
-                        the most appropriate terms for damages, causes, mechanisms, and actions in the report. This service was 
-                        made available through a RESTful API that allowed integration with the equipment inspection management 
-                        system used by Petrobras inspectors. Additionally, the digital inspector can improve its learning as more 
-                        reports are added to our database, validated by inspectors, and made available for continuous model 
-                        retraining.
+                        The final product, called the Digital Inspector, was deployed as a RESTful API integrated into Petrobras' inspection management system.
+                        It identifies missing or inconsistent information in real-time and suggests standardized terms for damage, cause, mechanism, and action.
+                        The model continuously improves with new, inspector-validated data.
                     </p>
                     <p class="text-muted-justified">
-                        This project received the Petrobras Inventor Award 2022 in recognition of the results achieved and the 
-                        impact on the efficiency of equipment maintenance in refineries across Brazil. Undoubtedly, the project 
-                        was challenging but provided ample opportunities to learn. I am so proud of the achieved results.
+                        This project was awarded the Petrobras Inventor Award 2022, recognizing its impact on inspection accuracy and maintenance efficiency across refineries in Brazil.
+                        It was a complex and rewarding challenge that I'm proud of, both for the technical achievements and its benefits to the industry.
                     </p>
-                    <img class="img-fluid d-block mx-auto" src="../assets/img/projects/digital-inspector/award.jpg"
-                        alt="" />
-                    
+                    <p class="text-muted-centered">
+                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/digital-inspector/award.jpg" alt="" />
+                        <b>Figure 1:</b> Petrobras Inventor Award 2022 for the “Digital Inspector” AI project developed with Petrobras.
+                    </p>
                     <ul class="list-inline">
                         <li>More information:
                             <a class="link" target="_blank"
