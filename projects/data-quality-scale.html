@@ -1,0 +1,161 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>About André Luiz</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <div id="navbar"></div>
+
+    <section class="page-section bg-white portfolio-section" id="projects">
+        <div class="container" style="margin-top: 27px;">
+            <div class="text-center">
+                <img class="img-fluid d-block mx-auto" src="../assets/img/projects/data-quality-scale/logo.png" alt="" />
+                <h2 class="section-heading text-uppercase">Data Quality at Scale</h2>
+                <h3 class="section-subheading text-muted">Automating Alerts to Ensure Data Driven Decisions</h3>
+            </div>
+            <div class="text-left">
+                <h4 class="section-heading text-capitalize">Overview</h4>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <p class="text-muted-justified">
+                        <b>(S)ituation:</b> In 2024 at Seedz, a data-driven agritech platform, faced recurring data issues such as missing submissions, incorrect scoring, and degraded service performance. These challenges affected key components of the loyalty program, which had already enabled BRL 10+ billion in transactions.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>(T)ask:</b> I led the Data Quality team to develop a solution that would automate the detection of data issues and provide real-time alerts to stakeholders. The goal was to enhance data integrity and operational efficiency.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>(A)ction:</b> We developed a two-phase strategy. In Phase 1, we built modular microservices to continuously validate data flow across the pipeline, from ingestion to consumption. These services generated alerts for any detected issues. In Phase 2, we designed interactive dashboards to visualize data integrity trends and enable real-time monitoring.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>(R)esult:</b> We successfully automated a wide range of recurring analyses, reducing investigation times from days to seconds. This significantly improved operational agility and confidence in our data ecosystem. The second phase is currently underway, focusing on stakeholder interviews to refine dashboard designs and reporting tools.
+                    </p>
+                </div>
+            </div>
+            <div class="text-left">
+                <h4 class="section-heading text-capitalize">Full Report</h4>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <p class="text-muted-justified">
+                        As a Software Engineering Manager at <a class="link" target="_blank" href='https://www.seedz.ag/'>Seedz</a> (2024),
+                        I led the Data Quality team, responsible for ensuring the accuracy and integrity of data across our entire pipeline.
+                        Seedz is committed to transforming the agribusiness ecosystem through solutions such as a loyalty program that boosts
+                        sales campaigns by offering rewards to sellers and cashback to customers. Operating in 10 countries, our platform has
+                        supported financial transactions exceeding BRL 10 billion.
+                    </p>
+                    <p class="text-muted-justified">
+                        Like many fast-growing companies, we faced recurring issues reported by Client Managers and stakeholders, often leading
+                        to frequent analysis requests. To address these concerns, I mapped and categorized the most common types of requests
+                        and complaints:
+                        <ul class="text-muted-justified">                            
+                            <li>Loyalty programs with unusually low scores</li>
+                            <li>Clients stopping data submission</li>
+                            <li>Submitted data not appearing on the platform</li>
+                            <li>Duplicate records in client dashboards</li>
+                            <li>Overloaded queues and service degradation</li>
+                            <li>Data outside the expected scope</li>
+                            <li>Inaccurate performance metrics reported by Sales</li>
+                        </ul>
+                    </p>
+                    <p class="text-muted-justified">
+                        Each issue could have multiple root causes, often unique and non-repetitive. It became clear that without a structured
+                        detection mechanism, many of these problems would persist. After mapping the data pipeline and analyzing historical reports,
+                        I found that most issues originated from three critical stages: data ingestion, data movement across databases, and scoring.
+                        Seedz’s data architecture follows a medallion model:
+                        <ul class="text-muted-justified">
+                            <li><b>Bronze Layer:</b> Raw data ingestion via APIs or databases, stored in its original form</li>
+                            <li><b>Silver Layer:</b> Data cleaning, deduplication, normalization, and enrichment</li>
+                            <li><b>Gold Layer:</b> Aggregated, business-ready datasets for decision-making</li>
+                        </ul>
+                    </p>
+                    <p class="text-muted-justified">
+                        However, due to legacy constraints, many platform services continued to rely on isolated databases (e.g., MySQL, MongoDB),
+                        bypassing the Gold layer. This created additional complexity, often requiring Silver-layer data to be synchronized with
+                        service-specific databases.
+                    </p>
+                    <p class="text-muted-centered">
+                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/data-quality-scale/pipeline.png" alt="" />
+                        <b>Figure 1:</b> Illustration of the data pipeline architecture, showcasing the flow of data across the Bronze, Silver, and Gold layers.
+                    </p>
+                    <p class="text-muted-justified">
+                        To address these challenges, I developed a two-phase action plan:
+                        <ul class="text-muted-justified">
+                            <li><b>Phase 1:</b> Develop microservices that continuously validated the flow of data—from ingestion to consumption. These services were configured to run periodically and generate alerts whenever issues were detected.</li>
+                            <li><b>Phase 2:</b> Design interactive dashboards with user-friendly graphical interfaces, enabling internal teams to monitor alerts in real-time, analyze data integrity trends, and generate detailed reports on demand.</li>
+                        </ul>
+                    </p>
+                    <p class="text-muted-justified">
+                        Monitoring was categorized into three domains:
+                        <ul class="text-muted-justified">
+                            <li><b>Data Ingestion:</b> Tracking file sizes at the Bronze layer, record counts at the Silver layer, and data quality where alerts are triggered when incoming data falls outside the scope of the products in which a client is enrolled.</li>
+                            <li><b>Data Movement:</b> Verifying complete and accurate data flow across all layers and into operational databases.</li>
+                            <li><b>Scoring:</b> Monitoring score calculations per partner and identifying root causes for missing or incorrect scoring.</li>
+                        </ul>
+                    </p>
+                    <p class="text-muted-justified">
+                        Each monitoring tool was implemented as a microservice using a 3-tier architecture (Data Layer, Logic Layer, Presentation Layer)
+                        to ensure scalability, maintainability, and separation of concerns. Most were deployed as APIs using Python, containerized via Docker,
+                        and orchestrated within our AWS environment. With this first phase complete, Seedz was able to automate a broad range of recurring
+                        analyses and trigger alerts in near real time. As a result, investigations that previously took days were reduced to seconds,
+                        significantly improving operational agility and confidence in our data ecosystem.
+                    </p>
+                    <p class="text-muted-justified">
+                        The second phase is currently underway. We are conducting interviews and discovery sessions with internal stakeholders—including
+                        Client Managers, Product Owners, and Operations Analysts—to better understand their needs and priorities. The goal is to identify
+                        which monitoring insights are most valuable and how to present them effectively through visual interfaces. These findings will guide
+                        the development of dashboards and reporting tools that enable proactive decision-making, improve transparency, and support our broader
+                        data governance efforts.
+                    </p>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <div id="footer"></div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    
+    <script>
+        const nav = ['navbar'];
+        nav.forEach(b => {
+            fetch(`${b}.html`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(`${b}`).outerHTML = data;
+                })
+                .catch(error => console.error(`Error loading ${b}:`, error));
+        });
+
+        const body = ['footer'];
+        body.forEach(b => {
+            fetch(`../body/${b}.html`)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(`${b}`).outerHTML = data;
+                })
+                .catch(error => console.error(`Error loading ${b}:`, error));
+        });
+    </script>
+</body>
+</html>
