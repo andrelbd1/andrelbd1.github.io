@@ -28,7 +28,7 @@
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About me</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#analyses">Analyses</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#coding">Coding</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
@@ -43,7 +43,7 @@
     <!-- Sections-->
     <div id="section-about-me"></div>
     <div id="section-projects"></div>
-    <div id="section-analyses"></div>
+    <div id="section-coding"></div>
     <div id="section-education"></div>
     <section class="page-section bg-white" id="publications">
         <div class="container">
@@ -90,7 +90,7 @@
                 .catch(error => console.error(`Error loading ${b}:`, error));
         });
 
-        const sections = ['about-me', 'analyses', 'contact', 'education', 'projects'];
+        const sections = ['about-me', 'coding', 'contact', 'education', 'projects'];
         sections.forEach(section => {
             fetch(`body/sections/${section}.html`)
                 .then(response => response.text())
