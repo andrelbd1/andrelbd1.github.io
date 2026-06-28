@@ -37,7 +37,7 @@
                         <b>(S)ituation:</b> In 2024 at Seedz, a data-driven agritech platform, faced recurring data issues such as missing submissions, incorrect scoring, and degraded service performance. These challenges affected key components of the loyalty program, which had already enabled BRL 10+ billion in transactions.
                     </p>
                     <p class="text-muted-justified">
-                        <b>(T)ask:</b> I led the Data Quality team to develop a solution that would automate the detection of data issues and provide real-time alerts to stakeholders. The goal was to enhance data integrity and operational efficiency.
+                        <b>(T)ask:</b> I led a Data Quality initiative to develop a solution to identify data issues and provide real-time alerts to stakeholders. The goal was to enhance data integrity and operational efficiency.
                     </p>
                     <p class="text-muted-justified">
                         <b>(A)ction:</b> We developed a two-phase strategy. In Phase 1, we built modular microservices to continuously validate data flow across the pipeline, from ingestion to consumption. These services generated alerts for any detected issues. In Phase 2, we designed interactive dashboards to visualize data integrity trends and enable real-time monitoring.
@@ -53,74 +53,123 @@
             <div class="row justify-content-center">
                 <div class="col-md-11">
                     <p class="text-muted-justified">
-                        As a Software Engineering Manager at <a class="link" target="_blank" href='https://www.seedz.ag/'>Seedz</a> (2024),
-                        I led the Data Quality team, responsible for ensuring the accuracy and integrity of data across our entire pipeline.
-                        Seedz is committed to transforming the agribusiness ecosystem through solutions such as a loyalty program that boosts
-                        sales campaigns by offering rewards to sellers and cashback to customers. Operating in 10 countries, our platform has
+                        As a Data Engineer at <a class="link" target="_blank" href='https://www.seedz.ag/'>Seedz</a> (2024),
+                        I led a Data Quality initiative, responsible for ensuring the accuracy, consistency, and integrity of data across our entire pipeline.
+                        Seedz is committed to transforming the agribusiness ecosystem through solutions such as a loyalty platform to leverage
+                        sales campaigns by offering rewards to sellers and cashback to customers. Operating in 10 countries, the platform has
                         supported financial transactions exceeding BRL 10 billion.
                     </p>
                     <p class="text-muted-justified">
-                        Like many fast-growing companies, we faced recurring issues reported by Client Managers and stakeholders, often leading
-                        to frequent analysis requests. To address these concerns, I mapped and categorized the most common types of requests
-                        and complaints:
+                        Like many fast-growing companies, Data teams frequently received recurring data quality issues reported by Client Managers and stakeholders,
+                        which often resulted in repeated analysis requests and operational interruptions. To address this, I mapped and categorized the most
+                        common types of issues:
                         <ul class="text-muted-justified">                            
-                            <li>Loyalty programs with unusually low scores</li>
-                            <li>Clients stopping data submission</li>
+                            <li>Loyalty programs showing unusually low scores</li>
+                            <li>Clients stopping data submission unexpectedly</li>
                             <li>Submitted data not appearing on the platform</li>
                             <li>Duplicate records in client dashboards</li>
                             <li>Overloaded queues and service degradation</li>
                             <li>Data outside the expected scope</li>
-                            <li>Inaccurate performance metrics reported by Sales</li>
+                            <li>Inaccurate performance metrics reported by Sales teams</li>
                         </ul>
                     </p>
                     <p class="text-muted-justified">
                         Each issue could have multiple root causes, often unique and non-repetitive. It became clear that without a structured
-                        detection mechanism, many of these problems would persist. After mapping the data pipeline and analyzing historical reports,
-                        I found that most issues originated from three critical stages: data ingestion, data movement across databases, and scoring.
-                        Seedz’s data architecture follows a medallion model:
-                        <ul class="text-muted-justified">
-                            <li><b>Bronze Layer:</b> Raw data ingestion via APIs or databases, stored in its original form</li>
-                            <li><b>Silver Layer:</b> Data cleaning, deduplication, normalization, and enrichment</li>
-                            <li><b>Gold Layer:</b> Aggregated, business-ready datasets for decision-making</li>
-                        </ul>
+                        detection and monitoring mechanism, these problems would persist. After mapping the data pipeline and analyzing historical incident reports,
+                        I identified that most issues originated from three critical stages: data ingestion, data movement across databases, and scoring logic.                        
                     </p>
                     <p class="text-muted-justified">
-                        However, due to legacy constraints, many platform services continued to rely on isolated databases (e.g., MySQL, MongoDB),
-                        bypassing the Gold layer. This created additional complexity, often requiring Silver-layer data to be synchronized with
-                        service-specific databases.
+                        However, due to legacy constraints, several platform services continued to rely on isolated operational databases (e.g., MySQL and MongoDB),
+                        while Power BI dashboards queried these OLTP databases directly instead of consuming curated datasets from the data warehouse.
+                        Additionally, <b>the ingestion and transformation pipeline was implemented as an event-driven architecture using AWS Lambda and Amazon SQS,
+                        where data ingestion, processing, and delivery were coordinated through asynchronous events</b>. Although this serverless architecture provided
+                        scalability, loose coupling, and operational flexibility, it also fragmented the processing logic across numerous Lambda functions and SQS queues.
+                        As the system evolved, end-to-end observability became increasingly difficult, making it challenging to trace data lineage, diagnose failures,
+                        and identify the root cause of data quality issues across the pipeline.
                     </p>
                     <p class="text-muted-centered">
-                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/data-quality-scale/pipeline.png" alt="" />
-                        <b>Figure 1:</b> Illustration of the data pipeline architecture, showcasing the flow of data across the Bronze, Silver, and Gold layers.
+                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/data-quality-scale/old_pipeline.png" alt="" />
+                        <b>Figure 1:</b> Illustration of the old data pipeline architecture.
                     </p>
                     <p class="text-muted-justified">
-                        To address these challenges, I developed a two-phase action plan:
+                        To address these challenges, I worked with my team to design and implement a three-phase action plan to modernize the data platform,
+                        improve observability, and automate data quality validation.
+                    </p>
+                    <p class="text-muted-justified">
+                        <h5 class="section-heading text-capitalize">Phase 1: Modernize the Data Platform</h5>
+                    </p>
+                    <p class="text-muted-justified">
+                        We migrated from a serverless event-driven architecture based on AWS Lambda to a batch-oriented architecture orchestrated by
+                        Apache Airflow, using dbt for data transformation. This change centralized the data processing workflow, simplified orchestration,
+                        and significantly improved observability and maintainability.
+                    </p>
+                    <p class="text-muted-justified">
+                        We also redesigned the data architecture following the Medallion pattern on Amazon Redshift:
                         <ul class="text-muted-justified">
-                            <li><b>Phase 1:</b> Develop microservices that continuously validated the flow of data—from ingestion to consumption. These services were configured to run periodically and generate alerts whenever issues were detected.</li>
-                            <li><b>Phase 2:</b> Design interactive dashboards with user-friendly graphical interfaces, enabling internal teams to monitor alerts in real-time, analyze data integrity trends, and generate detailed reports on demand.</li>
+                            <li><b>Bronze Layer:</b> Raw data ingested from APIs and operational databases, stored in its original format.</li>
+                            <li><b>Silver Layer:</b> Data cleansing, deduplication, normalization, enrichment, and business rule application.</li>
+                            <li><b>Gold Layer:</b> Curated, business-ready datasets modeled using a Star Schema to optimize analytical queries and reporting.</li>
                         </ul>
                     </p>
                     <p class="text-muted-justified">
-                        Monitoring was categorized into three domains:
+                        In addition, we migrated scoring data that previously resided in isolated services into the data warehouse,
+                        making it directly accessible through Power BI and establishing a single source of truth for business reporting.
+                    </p>
+                    <p class="text-muted-justified">
+                        <h5 class="section-heading text-capitalize">Phase 2: Build a Data Quality, Observability, and Governance Framework</h5>
+                    </p>
+                    <p class="text-muted-justified">
+                        The second phase focused on implementing continuous monitoring, automated data validation, and metadata management across the entire data lifecycle,
+                        from ingestion to data delivery. We developed automated validation services that executed periodically and generated alerts whenever anomalies or
+                        data quality issues were detected.
+                    <p class="text-muted-justified">
+                        Monitoring was organized into four domains:
                         <ul class="text-muted-justified">
-                            <li><b>Data Ingestion:</b> Tracking file sizes at the Bronze layer, record counts at the Silver layer, and data quality where alerts are triggered when incoming data falls outside the scope of the products in which a client is enrolled.</li>
-                            <li><b>Data Movement:</b> Verifying complete and accurate data flow across all layers and into operational databases.</li>
-                            <li><b>Scoring:</b> Monitoring score calculations per partner and identifying root causes for missing or incorrect scoring.</li>
+                            <li><b>Freshness and Volume:</b> Monitoring data freshness, and record volumes across the Bronze and Silver layers.</li>
+                            <li><b>Health Checks:</b> Validating completeness, uniqueness, consistency, referential integrity, and business-specific rules. Alerts were also triggered whenever incoming data fell outside the scope of a client's loyalty program.</li>
+                            <li><b>Data Lineage:</b> Tracking where and when data was written, identifying which processes modified it, and verifying that data propagated correctly across the Medallion layers and downstream operational databases such as MySQL and MongoDB.</li>
+                            <li><b>Scoring Validation:</b> Continuously monitoring score calculations for each partner and automatically identifying missing, incorrect, or unusually low scores together with their root causes.</li>
                         </ul>
                     </p>
                     <p class="text-muted-justified">
-                        Each monitoring tool was implemented as a microservice using a 3-tier architecture (Data Layer, Logic Layer, Presentation Layer)
-                        to ensure scalability, maintainability, and separation of concerns. Most were deployed as APIs using Python, containerized via Docker,
-                        and orchestrated within our AWS environment. With this first phase complete, Seedz was able to automate a broad range of recurring
-                        analyses and trigger alerts in near real time. As a result, investigations that previously took days were reduced to seconds,
-                        significantly improving operational agility and confidence in our data ecosystem.
+                        Most validations were implemented using dbt tests, Elementary, and Great Expectations, leveraging the data warehouse as the central validation layer.
+                        In parallel, we introduced a centralized data catalog using dbt Catalog, enabling teams to discover datasets, understand lineage and model dependencies,
+                        and access technical and business documentation through a single source of truth.
                     </p>
                     <p class="text-muted-justified">
-                        The second phase is currently underway. We are conducting interviews and discovery sessions with internal stakeholders—including
-                        Client Managers, Product Owners, and Operations Analysts—to better understand their needs and priorities. The goal is to identify
-                        which monitoring insights are most valuable and how to present them effectively through visual interfaces. These findings will guide
-                        the development of dashboards and reporting tools that enable proactive decision-making, improve transparency, and support our broader
-                        data governance efforts.
+                        For scenarios that required validations beyond the warehouse, we developed Python microservices capable of:
+                        <ul class="text-muted-justified">
+                            <li>Detecting data lost during synchronization between the data warehouse and operational databases (e.g., MySQL and MongoDB).</li>
+                            <li>Validating client-specific business rules before data reached the scoring engine, ensuring each loyalty program received only eligible transactions.</li>
+                        </ul>
+                    </p>
+                    <p class="text-muted-justified">
+                        <h5 class="section-heading text-capitalize">Phase 3: Deliver Operational Visibility</h5>
+                    </p>
+                    <p class="text-muted-justified">
+                       To make the monitoring actionable, we designed operational dashboards in Metabase and implemented automated reports delivered through Slack channels.
+                       These dashboards enabled engineering, operations, and business teams to monitor system health in real time, investigate data quality trends,
+                       and generate detailed reports on demand.
+                    </p>
+                    <p class="text-muted-justified">
+                       The solution followed a three-tier architecture composed of Data, Business Logic, and Presentation layers, ensuring clear separation of responsibilities,
+                       scalability, and maintainability. All microservices were developed in Python, containerized with Docker, and deployed on AWS.
+                    </p>
+                    <p class="text-muted-centered">
+                        <img class="img-fluid d-block mx-auto" src="../assets/img/projects/data-quality-scale/new_pipeline.png" alt="" />
+                        <b>Figure 2:</b> Illustration of the new data pipeline architecture.
+                    </p>
+                    <p class="text-muted-justified">
+                        <h5 class="section-heading text-capitalize">Results</h5>
+                    </p>
+                    <p class="text-muted-justified">
+                        The initiative fundamentally changed how Seedz managed data quality. Investigations that previously required days of manual analysis
+                        could now be completed in seconds through automated detection and diagnostics. Engineering teams became proactive instead of reactive,
+                        significantly increasing confidence in the company's data ecosystem while reducing operational workload.
+                    </p>
+                    <p class="text-muted-justified">
+                        <b>The migration from an event-driven architecture to a batch-oriented platform also reduced AWS infrastructure costs by more than 40%</b>,
+                        while improving reliability, simplifying maintenance, and providing a much more robust foundation for future growth.
                     </p>                    
                 </div>
             </div>
