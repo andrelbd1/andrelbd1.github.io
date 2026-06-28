@@ -43,7 +43,7 @@
                         <b>(A)ction:</b> I evaluated various solutions and designed a new batch-processing architecture using Python, multiprocessing, Docker, and Apache Airflow. Instead of multithreading, the pipeline adopted multiprocessing for greater parallelism and ran on EC2 instances orchestrated via ECS. Logs arriving in Amazon S3 triggered SQS messages, and the Airflow DAG, scheduled every 10 minutes, launched up to 11 containers to process logs in parallel. Transformed logs were stored back in S3 and ingested into Redshift for downstream analytics.
                     </p>
                     <p class="text-muted-justified">
-                        <b>(R)esult:</b> The new solution reduced the processing time for 110,000 logs from 55 minutes to just 5 minutes—a 90% performance improvement. It also ensured cost-effective scalability, timely data availability, and better support for analytics dashboards and decision-making processes.
+                        <b>(R)esult:</b> The new solution reduced the processing time for 110,000 logs from 55 minutes to just 5 minutes, a 90% performance improvement. It also ensured cost-effective scalability, timely data availability, and better support for analytics dashboards and decision-making processes.
                     </p>
                 </div>
             </div>
