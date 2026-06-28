@@ -63,7 +63,7 @@
                     <p class="text-muted-justified">
                         The legacy pipeline was inefficient.
                         It utilized an AWS Fargate job scheduled to run early the next day to sequentially process logs generated the previous day.
-                        Despite employing 10 threads and leveraging Amazon Redshift for progress tracking, processing 110,000 logs still took up to 55 minutes.
+                        Despite employing 10 threads and leveraging Amazon Redshift for progress tracking, <b>processing 110,000 logs</b> still <b>took up to 55 minutes</b>.
                         <b>With an average daily volume of 400,000 logs, the pipeline required up to 3.5 hours to complete</b>, resulting in unacceptable latency for downstream analytics.
                     </p>
                     <p class="text-muted-justified">
