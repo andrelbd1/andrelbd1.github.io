@@ -85,11 +85,23 @@
                         <b>Figure 1:</b> Illustration of the data pipeline for processing logs from the loyalty program.
                     </p>
                     <p class="text-muted-justified">
-                        Benchmark tests revealed significant performance improvements with the redesigned pipeline.
-                        Using a container with 4 GB RAM and 2 vCPUs, single-threaded processing of 10,000 logs took 67 minutes.
-                        By leveraging multiprocessing to split the workload into 10 parallel processes, the processing time was reduced to just 5 minutes, with each process consuming approximately 40 MB of memory.
-                        Therefore, the new solution reduced the processing time for 110,000 logs from 55 minutes to just 5 minutes, achieving a remarkable 90% reduction in processing time.
-                        This optimization significantly improved the pipeline’s performance, enabling faster processing, greater scalability, reduced costs, and enhanced data availability for downstream analytics.
+                        <h5 class="section-heading text-capitalize">Results</h5>
+                    </p>
+                    <p class="text-muted-justified">
+                        Benchmark testing demonstrated a substantial improvement in both performance and scalability after redesigning the pipeline.
+                        On a container with <b>4 GB RAM and 2 vCPUs</b>, processing <b>10,000 logs</b> sequentially required <b>67 minutes</b>.
+                        By redesigning the solution to use <b>10 parallel worker processes</b>, the execution time dropped to just <b>5 minutes</b>,
+                        while each worker consumed only ~40 MB of memory, demonstrating excellent resource efficiency.
+                    </p>
+                    <p class="text-muted-justified">
+                        At production scale, the impact was even more significant. Processing <b>110,000 logs</b>, which previously required approximately <b>55 minutes</b>,
+                        was completed in <b>only 5 minutes</b>, a <b>90% reduction in execution time</b>.
+                    </p>
+                    <p class="text-muted-justified">
+                        This optimization increased the pipeline's throughput while maintaining a low memory footprint,
+                        allowing the infrastructure to process substantially larger workloads without additional hardware.
+                        The result was faster data availability for downstream analytics, lower infrastructure costs, improved operational efficiency,
+                        and a more scalable architecture capable of supporting future business growth.
                     </p>
                 </div>
             </div>
