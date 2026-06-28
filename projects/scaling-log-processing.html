@@ -64,7 +64,7 @@
                         The legacy pipeline was inefficient.
                         It utilized an AWS Fargate job scheduled to run early the next day to sequentially process logs generated the previous day.
                         Despite employing 10 threads and leveraging Amazon Redshift for progress tracking, processing 110,000 logs still took up to 55 minutes.
-                        With an average daily volume of 400,000 logs, the pipeline required up to 3.5 hours to complete, resulting in unacceptable latency for downstream analytics.
+                        <b>With an average daily volume of 400,000 logs, the pipeline required up to 3.5 hours to complete</b>, resulting in unacceptable latency for downstream analytics.
                     </p>
                     <p class="text-muted-justified">
                         To address the inefficiencies, I designed a cost-effective and high-performance batch-processing solution.
